@@ -1,0 +1,43 @@
+
+# AuroraKeystrokes configuration.
+[hud]
+	# Show the sneak box.
+	show_sneak_box = true
+	# The layout mode.
+	layout = "pyramid"
+	# The padding of the key boxes.
+	padding = 4
+	# Show the attack box.
+	show_attack_box = true
+	# Show the movement boxes.
+	show_movement_boxes = true
+	# The text display mode, available values: ACTION_NAME and KEY_NAME.
+	text_display_mode = "key_name"
+	# Enables the display of the hud.
+	enable = true
+	# X position of the hud.
+	x = 2.0
+	# Y position of the hud.
+	y = 5.0
+	# Show the jump box.
+	show_jump_box = true
+	# Show the use box.
+	show_use_box = true
+
+# CPS settings.
+[cps]
+	# Show CPS counter.
+	show = true
+	# Attach the CPS counter to the box.
+	attached = true
+
+# Colors
+[colors]
+	rainbow_saturation = 0.699999988079071
+	normal = "#ffffffff"
+	# Enable rainbow text.
+	rainbow = true
+	background_normal = "#00000064"
+	pressed = "#ffa000ff"
+	background_pressed = "#555555aa"
+
