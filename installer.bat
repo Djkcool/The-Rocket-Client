@@ -1,4 +1,3 @@
-@echo off
 :: BatchGotAdmin
 :-------------------------------------
 REM  --> Check for permissions
@@ -41,10 +40,12 @@ cd %AppData%\.minecraft\config\
 if  exist kronhud @RD /S /Q kronhud
 if exist keystrokes.toml del keystrokes.toml
 if exist pvpsettings.txt del pvpsettings.txt
-cd \Files\Configs\
+if exist betterpingdisplay.json del betterpingdisplay.json
+cd c:\Files\Configs\
 move kronhud %AppData%\.minecraft\config\
 move keystrokes.toml %AppData%\.minecraft\config\
 move pvpsettings.txt %AppData%\.minecraft\config\
+move betterpingdisplay.json %AppData%\.minecraft\config\
 cd %AppData%\.minecraft\mods
 if exist aurorakeystrokes-fabric-1.2.4+1.16.2.jar (
 	del aurorakeystrokes-fabric-1.2.4+1.16.2.jar
@@ -58,11 +59,60 @@ if exist KronHUD-1.1.1-beta-1.16.2+.jar (
 if exist fabric-api-0.29.3+1.16.jar (
 	del fabric-api-0.29.3+1.16.jar
 	)
-cd \Files\Mods\
+if exist BetterPingDisplay-Fabric-1.16.4-1.1.jar (
+	del BetterPingDisplay-Fabric-1.16.4-1.1.jar
+	)
+cd c:\Files\Mods\
 move aurorakeystrokes-fabric-1.2.4+1.16.2.jar %AppData%\.minecraft\mods\
 move BetterPvPFairPlay_20.30.0_Fabric_1.16.4.jar %AppData%\.minecraft\mods\
 move KronHUD-1.1.1-beta-1.16.2+.jar %AppData%\.minecraft\mods\
 move fabric-api-0.29.3+1.16.jar %AppData%\.minecraft\mods\
+move BetterPingDisplay-Fabric-1.16.4-1.1.jar %AppData%\.minecraft\mods\
+echo Would You like to install so mods to improve preformance?(Y/N)
+set y=Y
+set n=N
+SET /P pi1=
+if %pi1%==%y% (
+	cd %AppData%\.minecraft\mods\
+	if exist lithium-fabric-mc1.16.4-0.6.0.jar (
+		del lithium-fabric-mc1.16.4-0.6.0.jar
+		)
+	if exist phosphor-fabric-mc1.16.3-0.7.0+build.10.jar (
+		del phosphor-fabric-mc1.16.3-0.7.0+build.10.jar
+		)
+	if exist sodium-fabric-mc1.16.3-0.1.0.jar (
+		del sodium-fabric-mc1.16.3-0.1.0.jar
+		)
+	if exist logical_zoom-0.0.7.jar (
+		del logical_zoom-0.0.7.jar
+		)
+	cd c:\Files\Mods\
+	move sodium-fabric-mc1.16.3-0.1.0.jar %AppData%\.minecraft\mods\
+	move phosphor-fabric-mc1.16.3-0.7.0+build.10.jar %AppData%\.minecraft\mods\
+	move lithium-fabric-mc1.16.4-0.6.0.jar %AppData%\.minecraft\mods\
+	move logical_zoom-0.0.7.jar %AppData%\.minecraft\mods\
+	)
+set y=y
+if %pi1%==%y% (
+	cd %AppData%\.minecraft\mods\
+	if exist lithium-fabric-mc1.16.4-0.6.0.jar (
+		del lithium-fabric-mc1.16.4-0.6.0.jar
+		)
+	if exist phosphor-fabric-mc1.16.3-0.7.0+build.10.jar (
+		del phosphor-fabric-mc1.16.3-0.7.0+build.10.jar
+		)
+	if exist sodium-fabric-mc1.16.3-0.1.0.jar (
+		del sodium-fabric-mc1.16.3-0.1.0.jar
+		)
+	if exist logical_zoom-0.0.7.jar (
+		del logical_zoom-0.0.7.jar
+		)
+	cd c:\Files\Mods\
+	move sodium-fabric-mc1.16.3-0.1.0.jar %AppData%\.minecraft\mods\
+	move phosphor-fabric-mc1.16.3-0.7.0+build.10.jar %AppData%\.minecraft\mods\
+	move lithium-fabric-mc1.16.4-0.6.0.jar %AppData%\.minecraft\mods\
+	move logical_zoom-0.0.7.jar %AppData%\.minecraft\mods\
+	)
 echo Installation Complete!
 echo To use the client use the fabric profile if you do not have it please install fabric 
 pause
