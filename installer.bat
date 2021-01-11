@@ -54,6 +54,9 @@ if exist aurorakeystrokes-fabric-1.2.4+1.16.2.jar (
 if exist BetterPvPFairPlay_20.30.0_Fabric_1.16.4.jar (
 	del BetterPvPFairPlay_20.30.0_Fabric_1.16.4.jar
 	)
+if exist BetterPvPFairPlay_21.0.0_Fabric_1.16.4.jar (
+	del BetterPvPFairPlay_21.0.0_Fabric_1.16.4.jar
+	)
 if exist KronHUD-1.1.1-beta-1.16.2+.jar (
 	del KronHUD-1.1.1-beta-1.16.2+.jar
 	)
@@ -65,7 +68,7 @@ if exist BetterPingDisplay-Fabric-1.16.4-1.1.jar (
 	)
 cd c:\Files\Mods\
 move aurorakeystrokes-fabric-1.2.4+1.16.2.jar %AppData%\.minecraft\mods\
-move BetterPvPFairPlay_20.30.0_Fabric_1.16.4.jar %AppData%\.minecraft\mods\
+move BetterPvPFairPlay_21.0.0_Fabric_1.16.4.jar %AppData%\.minecraft\mods\
 move KronHUD-1.1.1-beta-1.16.2+.jar %AppData%\.minecraft\mods\
 move fabric-api-0.29.3+1.16.jar %AppData%\.minecraft\mods\
 move BetterPingDisplay-Fabric-1.16.4-1.1.jar %AppData%\.minecraft\mods\
