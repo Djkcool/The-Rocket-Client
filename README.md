@@ -1,4 +1,4 @@
-# DPvP-Client
+# The-Rocket-Client
 It is a minecraft Pvp client  
 The installer has only been tested to work on Windows 10 20H2 it may or may not work on other platforms or versions  
 Please Note to run this client it must be launched with the fabric 1.16.4 profile  
