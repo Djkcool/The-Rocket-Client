@@ -42,11 +42,15 @@ if  exist kronhud @RD /S /Q kronhud
 if exist keystrokes.toml del keystrokes.toml
 if exist pvpsettings.txt del pvpsettings.txt
 if exist betterpingdisplay.json del betterpingdisplay.json
+if exist fancymenu @RD /S /Q fancymenu
+if exist customwindowtitle-client.toml del customwindowtitle-client.toml
 cd c:\Files\Configs\
 move kronhud %AppData%\.minecraft\config\
 move keystrokes.toml %AppData%\.minecraft\config\
 move pvpsettings.txt %AppData%\.minecraft\config\
 move betterpingdisplay.json %AppData%\.minecraft\config\
+move fancymenu %AppData%\.minecraft\config\
+move customwindowtitle-client.toml %AppData%\.minecraft\config\
 cd %AppData%\.minecraft\mods
 if exist aurorakeystrokes-fabric-1.2.4+1.16.2.jar (
 	del aurorakeystrokes-fabric-1.2.4+1.16.2.jar
@@ -57,18 +61,38 @@ if exist BetterPvPFairPlay_20.30.0_Fabric_1.16.4.jar (
 if exist KronHUD-1.1.1-beta-1.16.2+.jar (
 	del KronHUD-1.1.1-beta-1.16.2+.jar
 	)
-if exist fabric-api-0.29.3+1.16.jar (
-	del fabric-api-0.29.3+1.16.jar
-	)
 if exist BetterPingDisplay-Fabric-1.16.4-1.1.jar (
 	del BetterPingDisplay-Fabric-1.16.4-1.1.jar
+	)
+if exist audiooutput-1.16.2-0.0.3.jar (
+	del audiooutput-1.16.2-0.0.3.jar 
+	)
+if exist CustomWindowTitle-1.15+v1.1.0.jar (
+	del CustomWindowTitle-1.15+v1.1.0.jar
+	)
+if exist dark-loading-screen-1.5.0.jar (
+	del dark-loading-screen-1.5.0.jar
+	)
+if exist DCCH-1.0.jar (
+	del DCCH-1.0.jar
+	)
+if exist fancymenu_fabric_1.6.0_MC_1.16.3-1.16.4.jar (
+	del fancymenu_fabric_1.6.0_MC_1.16.3-1.16.4.jar
+	)
+if exist konkrete_fabric_1.1.1_MC_1.16.3-1.16.4.jar (
+	del konkrete_fabric_1.1.1_MC_1.16.3-1.16.4.jar
 	)
 cd c:\Files\Mods\
 move aurorakeystrokes-fabric-1.2.4+1.16.2.jar %AppData%\.minecraft\mods\
 move BetterPvPFairPlay_20.30.0_Fabric_1.16.4.jar %AppData%\.minecraft\mods\
 move KronHUD-1.1.1-beta-1.16.2+.jar %AppData%\.minecraft\mods\
-move fabric-api-0.29.3+1.16.jar %AppData%\.minecraft\mods\
 move BetterPingDisplay-Fabric-1.16.4-1.1.jar %AppData%\.minecraft\mods\
+move audiooutput-1.16.2-0.0.3.jar %AppData%\.minecraft\mods\
+move CustomWindowTitle-1.15+v1.1.0.jar %AppData%\.minecraft\mods\
+move dark-loading-screen-1.5.0.jar %AppData%\.minecraft\mods\
+move DCCH-1.0.jar %AppData%\.minecraft\mods\
+move fancymenu_fabric_1.6.0_MC_1.16.3-1.16.4.jar %AppData%\.minecraft\mods\
+move konkrete_fabric_1.1.1_MC_1.16.3-1.16.4.jar %AppData%\.minecraft\mods\
 echo Would You like to install so mods to improve preformance?(Y/N)
 set y=Y
 set n=N
@@ -113,6 +137,41 @@ if %pi1%==%y% (
 	move phosphor-fabric-mc1.16.3-0.7.0+build.10.jar %AppData%\.minecraft\mods\
 	move lithium-fabric-mc1.16.4-0.6.0.jar %AppData%\.minecraft\mods\
 	move logical_zoom-0.0.7.jar %AppData%\.minecraft\mods\
+	)
+if %pi1%==%n% (
+	echo Not Installing Preformance improving mods
+	)
+set n=n
+if %pi1%==%n% (
+	echo Not Installing Preformance improving mods
+	)
+echo Do you want to install the fabric API(say no if u have installed the launcher before)(Y to install, N to not install)
+SET /P fa1=
+set y=Y
+if %fa1%==%y% (
+	cd %AppData%\.minecraft\mods\
+	if exist fabric-api-0.29.3+1.16.jar (
+		del fabric-api-0.29.3+1.16.jar
+		)
+	cd c:\Files\Mods\
+	move fabric-api-0.29.3+1.16.jar %AppData%\.minecraft\mods\
+	)
+set y=y
+if %fa1%==%y% (
+	cd %AppData%\.minecraft\mods\
+	if exist fabric-api-0.29.3+1.16.jar (
+		del fabric-api-0.29.3+1.16.jar
+		)
+	cd c:\Files\Mods\
+	move fabric-api-0.29.3+1.16.jar %AppData%\.minecraft\mods\
+	)
+set n=N
+if %fa1%==%n% (
+	echo Not Installing Fabric Api
+	)
+set n=n
+if %fa1%==%n% (
+	echo Not Installing Fabric Api
 	)
 echo Installation Complete!
 echo To use the client use the fabric profile if you do not have it please install fabric 

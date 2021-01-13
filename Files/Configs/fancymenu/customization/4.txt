@@ -1,0 +1,31 @@
+type = menu
+
+customization-meta {
+  identifier = The-Rocket-Client-1.16.4
+  renderorder = foreground
+}
+
+customization {
+  orientation = top-left
+  buttonaction = opengui
+  x = 130
+  width = 177
+  action = addbutton
+  y = 260
+  label = Worlds
+  value = net.minecraft.class_526
+  height = 20
+}
+
+customization {
+  orientation = top-left
+  buttonaction = opengui
+  x = 323
+  width = 175
+  action = addbutton
+  y = 260
+  label = Servers
+  value = net.minecraft.class_500
+  height = 20
+}
+

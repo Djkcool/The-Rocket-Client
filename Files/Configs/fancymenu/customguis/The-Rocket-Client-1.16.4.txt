@@ -1,0 +1,3 @@
+identifier = The-Rocket-Client-1.16.4
+title = The Rocket Client
+allowesc = true
