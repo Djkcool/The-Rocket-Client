@@ -1,0 +1,17 @@
+-Included by default-
+#audiooutput-1.16.2-0.0.3
+#aurorakeystrokes-fabric-1.2.4+1.16.2
+#BetterPingDisplay-Fabric-1.16.4-1.1
+#BetterPvPFairPlay_20.30.0_Fabric_1.16.4
+#CustomWindowTitle-1.15+v1.1.0
+#dark-loading-screen-1.5.0
+#DCCH-1.0
+#fancymenu_fabric_1.6.0_MC_1.16.3-1.16.4
+#konkrete_fabric_1.1.1_MC_1.16.3-1.16.4
+#KronHUD-1.1.1-beta-1.16.2+
+-Optional-
+#fabric-api-0.29.3+1.16
+#lithium-fabric-mc1.16.4-0.6.0 -Performance improving mod
+#logical_zoom-0.0.7 - Part of Preformance improving mods
+#phosphor-fabric-mc1.16.3-0.7.0+build.10 - Part of Preformance improving mods
+#sodium-fabric-mc1.16.3-0.1.0 - Part of performance improving mods

@@ -23,8 +23,8 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------
-title DPvP Client 1.16.4 Installer
-echo Are you ready to instal the DPvP Client for 1.16.4(Fabric)
+title The Rocket Client 1.16.4 Installer v0.6
+echo Are you ready to instal The Rocket Client for 1.16.4(Fabric) Version 0.6
 echo Type Y to contiune with the instalation or Type N to cancel
 set y=y
 set N=N
@@ -32,73 +32,65 @@ SET /P rus1=
 IF %rus1%==%n% exit
 set n=n
 if %rus1%==%n% exit
-if %rus1%==%y% echo Thanks for choosing the DPvP client
+if %rus1%==%y% echo Thanks for choosing The Rocket client
 set y=Y
-if %rus1%==%y% echo Thanks for choosing the DPvP client
+if %rus1%==%y% echo Thanks for choosing The Rocket client
+echo Is your .minecraft folder in the deafult position(%AppData%\.minecraft\)(Y/N)(If you dont know check before continuing the installation)
+set y=y
+set n=n
+set /p mdp=
+if %mdp%==%y% (
+	set mf=%AppData%\.minecraft
+	)
+set y=Y
+if %mdp%==%y% (
+	set mf=%AppData%\.minecraft
+	)
+if %mdp%==%n% (
+	echo Please state where your .minecraft folder is located
+	set /p mf=
+	)
+set n=N
+if %mdp%==%n% (
+	echo Please state where your .minecraft folder is located
+	set /p mf=
+	)
 echo Installing is about to begin.
-move Files c:\
-cd %AppData%\.minecraft\config\
-if  exist kronhud @RD /S /Q kronhud
-if exist keystrokes.toml del keystrokes.toml
-if exist pvpsettings.txt del pvpsettings.txt
-if exist betterpingdisplay.json del betterpingdisplay.json
-if exist fancymenu @RD /S /Q fancymenu
-if exist customwindowtitle-client.toml del customwindowtitle-client.toml
-cd c:\Files\Configs\
-move kronhud %AppData%\.minecraft\config\
-move keystrokes.toml %AppData%\.minecraft\config\
-move pvpsettings.txt %AppData%\.minecraft\config\
-move betterpingdisplay.json %AppData%\.minecraft\config\
-move fancymenu %AppData%\.minecraft\config\
-move customwindowtitle-client.toml %AppData%\.minecraft\config\
-cd %AppData%\.minecraft\mods
-if exist aurorakeystrokes-fabric-1.2.4+1.16.2.jar (
-	del aurorakeystrokes-fabric-1.2.4+1.16.2.jar
+move "Files" "c:\"
+cd %mf%
+powershell -EncodedCommand CgAgACAAIAAgACMAIABTAGUAdAAgAGYAaQBsAGUAIABuAGEAbQBlAAoAIAAgACAAIAAkAEYAaQBsAGUAIAA9ACAAJwBsAGEAdQBuAGMAaABlAHIAXwBwAHIAbwBmAGkAbABlAHMALgBqAHMAbwBuACcACgAgACAAIAAgAAoAIAAgACAAIAAjACAAUAByAG8AYwBlAHMAcwAgAGwAaQBuAGUAcwAgAG8AZgAgAHQAZQB4AHQAIABmAHIAbwBtACAAZgBpAGwAZQAgAGEAbgBkACAAYQBzAHMAaQBnAG4AIAByAGUAcwB1AGwAdAAgAHQAbwAgACQATgBlAHcAQwBvAG4AdABlAG4AdAAgAHYAYQByAGkAYQBiAGwAZQAKACAAIAAgACAAJABOAGUAdwBDAG8AbgB0AGUAbgB0ACAAPQAgAEcAZQB0AC0AQwBvAG4AdABlAG4AdAAgAC0AUABhAHQAaAAgACQARgBpAGwAZQAgAHwACgAgACAAIAAgACAAIAAgACAARgBvAHIARQBhAGMAaAAtAE8AYgBqAGUAYwB0ACAAewAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACMAIABPAHUAdABwAHUAdAAgAHQAaABlACAAZQB4AGkAcwB0AGkAbgBnACAAbABpAG4AZQAgAHQAbwAgAHAAaQBwAGUAbABpAG4AZQAgAGkAbgAgAGEAbgB5ACAAYwBhAHMAZQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAXwAKACAAIAAgACAACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAjACAASQBmACAAbABpAG4AZQAgAG0AYQB0AGMAaABlAHMAIAByAGUAZwBlAHgACgAgACAAIAAgACAAIAAgACAAIAAgACAAIABpAGYAKAAkAF8AIAAtAG0AYQB0AGMAaAAgACgAJwBeACcAIAArACAAWwByAGUAZwBlAHgAXQA6ADoARQBzAGMAYQBwAGUAKAAnACAAIAAiAHAAcgBvAGYAaQBsAGUAcwAiACAAOgAgAHsAJwApACkAKQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAHsACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACMAIABBAGQAZAAgAG8AdQB0AHAAdQB0ACAAYQBkAGQAaQB0AGkAbwBuAGEAbAAgAGwAaQBuAGUACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACcAIAAgACAAIAAiADQAMwA4ADQANQAyAGMAOABiADQAMABlAGUAMwA3ADIAYwAwADAAZQAxADcANwAwADYANQA4AGIAZAAyADEAYgAiACAAOgAgAHsACgAgACAAIAAgACAAIAAiAGMAcgBlAGEAdABlAGQAIgAgADoAIAAiADIAMAAyADEALQAwADEALQAyADUAVAAwADUAOgA1ADgAOgA1ADMALgA0ADAAMgBaACIALAAKACAAIAAgACAAIAAgACIAZwBhAG0AZQBEAGkAcgAiACAAOgAgACIAQwA6AFwAXABQAHIAbwBnAHIAYQBtACAARgBpAGwAZQBzAFwAXABUAGgAZQAtAFIAbwBjAGsAZQB0AC0AQwBsAGkAZQBuAHQAXABcAFAAcgBvAGYAaQBsAGUAcwBcAFwAMQAuADEANgAuADQALQAwAC4ANgAiACwACgAgACAAIAAgACAAIAAiAGkAYwBvAG4AIgAgADoAIAAiAEUAbgBjAGgAYQBuAHQAaQBuAGcAXwBUAGEAYgBsAGUAIgAsAAoAIAAgACAAIAAgACAAIgBsAGEAcwB0AFUAcwBlAGQAIgAgADoAIAAiADIAMAAzADAALQAwADEALQAwADEAVAAwADAAOgAwADAAOgAwADAALgAwADAAMABaACIALAAKACAAIAAgACAAIAAgACIAbABhAHMAdABWAGUAcgBzAGkAbwBuAEkAZAAiACAAOgAgACIAZgBhAGIAcgBpAGMALQBsAG8AYQBkAGUAcgAtADAALgAxADAALgA4AC0AMQAuADEANgAuADQAIgAsAAoAIAAgACAAIAAgACAAIgBuAGEAbQBlACIAIAA6ACAAIgBUAGgAZQAgAFIAbwBjAGsAZQB0ACAAQwBsAGkAZQBuAHQAIAAxAC4AMQA2AC4ANAAgAC0AIAAwAC4ANgAiACwACgAgACAAIAAgACAAIAAiAHQAeQBwAGUAIgAgADoAIAAiAGMAdQBzAHQAbwBtACIACgAgACAAIAAgAH0ALAAnAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAfQAKACAAIAAgACAAIAAgACAAIAB9AAoACgAgACAAIAAgACMAIABXAHIAaQB0AGUAIABjAG8AbgB0AGUAbgB0ACAAbwBmACAAJABOAGUAdwBDAG8AbgB0AGUAbgB0ACAAdgBhAHIAaQBiAGEAbABlACAAYgBhAGMAawAgAHQAbwAgAGYAaQBsAGUACgAgACAAIAAgACQATgBlAHcAQwBvAG4AdABlAG4AdAAgAHwAIABPAHUAdAAtAEYAaQBsAGUAIAAtAEYAaQBsAGUAUABhAHQAaAAgACQARgBpAGwAZQAgAC0ARQBuAGMAbwBkAGkAbgBnACAARABlAGYAYQB1AGwAdAAgAC0ARgBvAHIAYwBlAAoAIAAgACAAIAA=
+cd %ProgramFiles%
+if not exist The-Rocket-Client (
+	md The-Rocket-Client
 	)
-if exist BetterPvPFairPlay_20.30.0_Fabric_1.16.4.jar (
-	del BetterPvPFairPlay_20.30.0_Fabric_1.16.4.jar
+cd The-Rocket-client
+if not exist Profiles (
+	md Profiles
 	)
-if exist KronHUD-1.1.1-beta-1.16.2+.jar (
-	del KronHUD-1.1.1-beta-1.16.2+.jar
+cd Profiles
+if exist 1.16.4-0.6 (
+	cd 1.16.4-0.6
+	move "saves" "%ProgramFiles%\The-Rocket-Client\Profiles"
+	cd %ProgramFiles%\The-Rocket-Client\Profiles
+	RD /S /Q 1.16.4-0.6
 	)
-if exist BetterPingDisplay-Fabric-1.16.4-1.1.jar (
-	del BetterPingDisplay-Fabric-1.16.4-1.1.jar
+cd c:\Files
+move 1.16.4-0.6 "%ProgramFiles%\The-Rocket-Client\Profiles"
+cd %ProgramFiles%\The-Rocket-Client\Profiles
+if exist saves (
+	move "saves" "%ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6"
 	)
-if exist audiooutput-1.16.2-0.0.3.jar (
-	del audiooutput-1.16.2-0.0.3.jar 
+cd %mf%\versions
+if not exist fabric-loader-0.10.8-1.16.4 (
+	cd c:\Files
+	move "fabric-loader-0.10.8-1.16.4" "%mf%\versions"
 	)
-if exist CustomWindowTitle-1.15+v1.1.0.jar (
-	del CustomWindowTitle-1.15+v1.1.0.jar
-	)
-if exist dark-loading-screen-1.5.0.jar (
-	del dark-loading-screen-1.5.0.jar
-	)
-if exist DCCH-1.0.jar (
-	del DCCH-1.0.jar
-	)
-if exist fancymenu_fabric_1.6.0_MC_1.16.3-1.16.4.jar (
-	del fancymenu_fabric_1.6.0_MC_1.16.3-1.16.4.jar
-	)
-if exist konkrete_fabric_1.1.1_MC_1.16.3-1.16.4.jar (
-	del konkrete_fabric_1.1.1_MC_1.16.3-1.16.4.jar
-	)
-cd c:\Files\Mods\
-move aurorakeystrokes-fabric-1.2.4+1.16.2.jar %AppData%\.minecraft\mods\
-move BetterPvPFairPlay_20.30.0_Fabric_1.16.4.jar %AppData%\.minecraft\mods\
-move KronHUD-1.1.1-beta-1.16.2+.jar %AppData%\.minecraft\mods\
-move BetterPingDisplay-Fabric-1.16.4-1.1.jar %AppData%\.minecraft\mods\
-move audiooutput-1.16.2-0.0.3.jar %AppData%\.minecraft\mods\
-move CustomWindowTitle-1.15+v1.1.0.jar %AppData%\.minecraft\mods\
-move dark-loading-screen-1.5.0.jar %AppData%\.minecraft\mods\
-move DCCH-1.0.jar %AppData%\.minecraft\mods\
-move fancymenu_fabric_1.6.0_MC_1.16.3-1.16.4.jar %AppData%\.minecraft\mods\
-move konkrete_fabric_1.1.1_MC_1.16.3-1.16.4.jar %AppData%\.minecraft\mods\
 echo Would You like to install so mods to improve preformance?(Y/N)
 set y=Y
 set n=N
 SET /P pi1=
 if %pi1%==%y% (
-	cd %AppData%\.minecraft\mods\
+	cd %ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods
 	if exist lithium-fabric-mc1.16.4-0.6.0.jar (
 		del lithium-fabric-mc1.16.4-0.6.0.jar
 		)
@@ -111,15 +103,15 @@ if %pi1%==%y% (
 	if exist logical_zoom-0.0.7.jar (
 		del logical_zoom-0.0.7.jar
 		)
-	cd c:\Files\Mods\
-	move sodium-fabric-mc1.16.3-0.1.0.jar %AppData%\.minecraft\mods\
-	move phosphor-fabric-mc1.16.3-0.7.0+build.10.jar %AppData%\.minecraft\mods\
-	move lithium-fabric-mc1.16.4-0.6.0.jar %AppData%\.minecraft\mods\
-	move logical_zoom-0.0.7.jar %AppData%\.minecraft\mods\
+	cd c:\Files\1.16.4-PIM-0.6\
+	move "sodium-fabric-mc1.16.3-0.1.0.jar" "%ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods"
+	move "phosphor-fabric-mc1.16.3-0.7.0+build.10.jar" "%ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods"
+	move "lithium-fabric-mc1.16.4-0.6.0.jar" "%ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods"
+	move "logical_zoom-0.0.7.jar" "%ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods"
 	)
 set y=y
 if %pi1%==%y% (
-	cd %AppData%\.minecraft\mods\
+	cd %ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods
 	if exist lithium-fabric-mc1.16.4-0.6.0.jar (
 		del lithium-fabric-mc1.16.4-0.6.0.jar
 		)
@@ -132,11 +124,11 @@ if %pi1%==%y% (
 	if exist logical_zoom-0.0.7.jar (
 		del logical_zoom-0.0.7.jar
 		)
-	cd c:\Files\Mods\
-	move sodium-fabric-mc1.16.3-0.1.0.jar %AppData%\.minecraft\mods\
-	move phosphor-fabric-mc1.16.3-0.7.0+build.10.jar %AppData%\.minecraft\mods\
-	move lithium-fabric-mc1.16.4-0.6.0.jar %AppData%\.minecraft\mods\
-	move logical_zoom-0.0.7.jar %AppData%\.minecraft\mods\
+	cd c:\Files\1.16.4-PIM-0.6\
+	move "sodium-fabric-mc1.16.3-0.1.0.jar" "%ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods"
+	move "phosphor-fabric-mc1.16.3-0.7.0+build.10.jar" "%ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods"
+	move "lithium-fabric-mc1.16.4-0.6.0.jar" "%ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods"
+	move "logical_zoom-0.0.7.jar" "%ProgramFiles%\The-Rocket-Client\Profiles\1.16.4-0.6\mods"
 	)
 if %pi1%==%n% (
 	echo Not Installing Preformance improving mods
@@ -145,34 +137,7 @@ set n=n
 if %pi1%==%n% (
 	echo Not Installing Preformance improving mods
 	)
-echo Do you want to install the fabric API(say no if u have installed the launcher before)(Y to install, N to not install)
-SET /P fa1=
-set y=Y
-if %fa1%==%y% (
-	cd %AppData%\.minecraft\mods\
-	if exist fabric-api-0.29.3+1.16.jar (
-		del fabric-api-0.29.3+1.16.jar
-		)
-	cd c:\Files\Mods\
-	move fabric-api-0.29.3+1.16.jar %AppData%\.minecraft\mods\
-	)
-set y=y
-if %fa1%==%y% (
-	cd %AppData%\.minecraft\mods\
-	if exist fabric-api-0.29.3+1.16.jar (
-		del fabric-api-0.29.3+1.16.jar
-		)
-	cd c:\Files\Mods\
-	move fabric-api-0.29.3+1.16.jar %AppData%\.minecraft\mods\
-	)
-set n=N
-if %fa1%==%n% (
-	echo Not Installing Fabric Api
-	)
-set n=n
-if %fa1%==%n% (
-	echo Not Installing Fabric Api
-	)
+cd c:\
+RD /S /Q Files
 echo Installation Complete!
-echo To use the client use the fabric profile if you do not have it please install fabric 
 pause

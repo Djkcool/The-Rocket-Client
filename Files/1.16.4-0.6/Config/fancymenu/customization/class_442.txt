@@ -1,0 +1,136 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.class_442
+  renderorder = foreground
+}
+
+customization {
+  path = config/fancymenu/panoramas/panoram1.jpg
+  wideformat = true
+  action = texturizebackground
+}
+
+customization {
+  identifier = %id=400262%
+  orientation = mid-left
+  x = 161
+  action = movebutton
+  y = 29
+}
+
+customization {
+  identifier = %id=400310%
+  orientation = mid-right
+  x = -351
+  action = movebutton
+  y = 30
+}
+
+customization {
+  identifier = %id=400358%
+  orientation = bottom-centered
+  x = -98
+  action = movebutton
+  y = -168
+}
+
+customization {
+  identifier = %id=604394%
+  orientation = bottom-centered
+  x = 83
+  action = movebutton
+  y = -19
+}
+
+customization {
+  identifier = %id=400286%
+  orientation = mid-centered
+  x = -98
+  action = movebutton
+  y = 30
+}
+
+customization {
+  identifier = %id=400334%
+  orientation = bottom-centered
+  x = -97
+  action = movebutton
+  y = -202
+}
+
+customization {
+  identifier = %id=400394%
+  orientation = bottom-centered
+  x = -49
+  action = movebutton
+  y = -20
+}
+
+customization {
+  identifier = %id=502394%
+  orientation = mid-right
+  x = -118
+  action = movebutton
+  y = 30
+}
+
+customization {
+  identifier = %id=376394%
+  orientation = bottom-centered
+  x = -98
+  action = movebutton
+  y = -20
+}
+
+customization {
+  orientation = bottom-left
+  shadow = false
+  centered = false
+  x = 60
+  action = addtext
+  y = -232
+  scale = 1.0
+  value = The Rocket Client
+}
+
+customization {
+  path = config/fancymenu/rocketclient.png
+  orientation = top-left
+  x = 42
+  width = 133
+  action = addtexture
+  y = 197
+  height = 100
+}
+
+customization {
+  path = config/fancymenu/multiplayerlogo.jpg
+  orientation = top-left
+  x = 391
+  width = 178
+  action = addtexture
+  y = 177
+  height = 100
+}
+
+customization {
+  path = config/fancymenu/sp.jpg
+  orientation = top-left
+  x = 184
+  width = 159
+  action = addtexture
+  y = 177
+  height = 100
+}
+
+customization {
+  path = config/fancymenu/realms1.jpg
+  orientation = top-left
+  x = 614
+  width = 185
+  action = addtexture
+  y = 177
+  height = 100
+}
+
