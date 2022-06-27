@@ -1,6 +1,5 @@
 # The-Rocket-Client
-It is a minecraft Pvp client  
-The installer has only been tested to work on Windows 10 20H2 it may or may not work on other platforms or versions  
-Please Note to run this client it must be launched with the fabric 1.16.4 profile  
-If u get an error when starting minecraft like "duplicate versions" remove the older version of mods that are the same ex.Fabric api  
-After installing there will be a folder in your C:\ drive called Files You can delete this after the installation is comlete  
+It is a Minecraft PVP client/modpack.
+You can download the mods raw or you can download the modpack in both Curseforge and Modrinth formats (Support for downloading from them comming soon.)
+The installer is no longer supported, but more ways to install will come soon.
+As of now there is only 1 version and that is 1.19 which is based on Fabric. More version may come at a later stage.
