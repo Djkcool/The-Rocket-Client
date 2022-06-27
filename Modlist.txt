@@ -1,17 +1,34 @@
--Included by default-
-#audiooutput-1.16.2-0.0.3
-#aurorakeystrokes-fabric-1.2.4+1.16.2
-#BetterPingDisplay-Fabric-1.16.4-1.1
-#BetterPvPFairPlay_20.30.0_Fabric_1.16.4
-#CustomWindowTitle-1.15+v1.1.0
-#dark-loading-screen-1.5.0
-#DCCH-1.0
-#fancymenu_fabric_1.6.0_MC_1.16.3-1.16.4
-#konkrete_fabric_1.1.1_MC_1.16.3-1.16.4
-#KronHUD-1.1.1-beta-1.16.2+
--Optional-
-#fabric-api-0.29.3+1.16
-#lithium-fabric-mc1.16.4-0.6.0 -Performance improving mod
-#logical_zoom-0.0.7 - Part of Preformance improving mods
-#phosphor-fabric-mc1.16.3-0.7.0+build.10 - Part of Preformance improving mods
-#sodium-fabric-mc1.16.3-0.1.0 - Part of performance improving mods
+------------------------------
+-Quality of Life Improvements-
+------------------------------
+1. Appleskin - More info on food
+2. Better Ping Display - Display Ping in numbers instead of bars
+3. BetterPvP FairPlay - Loads of improvements for PVP 
+4. Better Third Person - Move the view 360 degrees in 3rd Person
+5. Chat Heads - Show skin head next to message when someone sends a message
+6. DCCH(Dont clear chat history) - Keeps that chat history even when you leave and rejoin a server
+7. FPS monitor - Shows fps whilst F3 isn't open
+8. Fuel info - Shows how many items will burn with a Fuel
+9. Grid - Shows a grid so you can place items without counting spaces
+10. Iris - Shaders
+11. Lamb dynamic lights - Lights things up when holding a light source in your hand
+12. Lazy dfu - Makes minecraft open super fast
+13. Logical zoom - Optifine like zoom
+14. Mod menu - Menu to show and configure mods 
+15. Replay mod - Record 3rd person perspective of gameplay
+16. Screenshot to clipboard - Copies F2 screenshot to clipboard
+17. Shulker box tooltip - Shows whats inside a shulker box whilst it is in your inventory
+18. Slime Chunk F3 - Shows if the chunk you are in is a slime in chunk in F3
+--------------------------
+-Performance Improvements-
+--------------------------
+1. Ferrite Core - Reduces RAM usage
+2. Lithium - General perpose optimizations
+3. Phosphor - Optimizes light engine
+4. Sodium - More efficent rendering engine replacement
+--------------
+-Dependencies-
+--------------
+1. Fabric api - Required for most fabric mods to work
+2. Indium - So you can use the fabric rendering api with sodium
+3. Konkrete - Mod library that makes some mods work
