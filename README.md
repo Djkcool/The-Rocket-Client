@@ -1,4 +1,7 @@
 # The Rocket Client
+
+**This project is now archieved and will not recieve any further updates. All information below is to be taken with this in mind.**
+
 It is a Minecraft PVP client/modpack.
 
 You can download the mods raw or you can download the modpack in both Curseforge and Modrinth formats (Support for downloading from them comming soon).
